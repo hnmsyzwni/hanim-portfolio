@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Hanim's Website &#9788;</h1>
+    <p>A resume site created for IMS456</p>
+</header>
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <div class="menu-links" id="menuLinks">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="fade-in">
+    <section style="text-align: center;">
+        <img src="hnmsyz.jpg" alt="My Profile Picture" class="circle-img fade-in">
+        <h2>Hello, I'm Hanim Syazwani &#9787;</h2>
+        <p>I am a sixth-semester student of the Bachelor of Information Science (Hons.) Library Management program at UiTM Rembau. I am passionate about learning, teamwork, and self-improvement. I enjoy building interactive websites and enhancing my skills in HTML, CSS, and JavaScript. This portfolio was created for IMS 456: Advanced Web Design and Content Management.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Hanim Syazwani. All Right Reserved. IMS456 Assignment Purpose.</p>
+</footer>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆️</button>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menuLinks").classList.toggle("active");
+  }
+</script>
+
+<script>
+    window.onscroll = function () {
+      const btn = document.getElementById("scrollTopBtn");
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+    ) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+</script>
+
+</body>
+</html>
+

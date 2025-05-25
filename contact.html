@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Contact Me</h1>
+</header>
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <div class="menu-links" id="menuLinks">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="fade-in">
+  <section class="contact-box">
+    <h2>Let's Get in Touch &#9788</h2>
+
+    <div class="social-icons">
+  <p><strong>Connect with me:</strong></p>
+  <a href="hanimsyazwanimohd@gmail.com" target="_blank">
+    <img src="email logo.webp" alt="Email">
+  </a>
+  <a href="https://wa.me/60176938671" target="_blank">
+    <img src="ws logo.webp" alt="WhatsApp">
+  </a>
+  <a href="https://www.facebook.com/hnm.syzwni.02" target="_blank">
+    <img src="fb logo.png" alt="Facebook">
+  </a>
+  <a href="https://www.instagram.com/hnmsyzwni" target="_blank">
+    <img src="ig logo.avif" alt="Instagram">
+  </a>
+</div>
+
+    <form class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Hanim Syazwani. All Right Reserved. IMS456 Assignment Purpose.</p>
+</footer>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆️</button>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menuLinks").classList.toggle("active");
+  }
+
+  window.onscroll = function() {
+    const btn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>

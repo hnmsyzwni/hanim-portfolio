@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>About Me</h1>
+</header>
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <div class="menu-links" id="menuLinks">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="fade-in">
+    <section class="about-container">
+        <img src="hanim.png" alt="Profile Picture" class="profile-pic">
+
+        <table>
+            <tr>
+                <td><strong>Name</strong></td>
+                <td>Hanim Syazwani binti Mohd @ Mohammed</td>
+            </tr>
+            <tr>
+                <td><strong>Student ID</strong></td>
+                <td>2022470986</td>
+            </tr>
+            <tr>
+                <td><strong>Group</strong></td>
+                <td>N5CDIM244EKA</td>
+            </tr>
+            <tr>
+                <td><strong>Course Code</strong></td>
+                <td>IMS456</td>
+            </tr>
+            <tr>
+                <td><strong>Course Name</strong></td>
+                <td>Advanced Web Design and Content Management</td>
+            </tr>
+            <tr>
+                <td><strong>Program Code</strong></td>
+                <td>CDIM244</td>
+            </tr>
+            <tr>
+                <td><strong>Faculty</strong></td>
+                <td>Faculty Information Science</td>
+            </tr>
+            <tr>
+                <td><strong>Submission Date</strong></td>
+                <td>26th May 2025</td>
+            </tr>
+            <tr>
+                <td><strong>Published URL</strong></td>
+                <td><a href="https://yourwebsite.com" target="_blank">https://yourwebsite.com</a></td>
+            </tr>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Hanim Syazwani. All Right Reserved. IMS456 Assignment Purpose.</p>
+</footer>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆️</button>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menuLinks").classList.toggle("active");
+  }
+</script>
+
+<script>
+    window.onscroll = function () {
+      const btn = document.getElementById("scrollTopBtn");
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+    ) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+</script>
+
+</body>
+</html>

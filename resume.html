@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>My Resume</h1>
+</header>
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <div class="menu-links" id="menuLinks">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="fade-in">
+    <section class="resume-box">
+        <h2>&#127979; Education</h2>
+    <div class="school-card">
+        <img src="uitm.png" alt="UiTM Logo" onclick="showPopup('uitm')" class="clickable-img uitm-img">
+        <p><strong>UiTM Rembau</strong><br><em>
+        Bachelor of Information Science (Hons.) Library Management : 2022 - Present</em></p>
+    </div>
+
+    <div class="school-card">
+        <img src="smk ketari.png" alt="School Logo" onclick="showPopup('ketari')" class="clickable-img">
+        <p><strong>SMK Ketari</strong><br><em>
+        STPM : 2020-2022</em></p>
+    </div>
+
+    <div class="school-card">
+        <img src="smk khai mun.jpg" alt="School Logo" onclick="showPopup('khai mun')" class="clickable-img">
+        <p><strong>SMK Khai Mun</strong><br><em>
+        SPM: 2015-2019</em></p>
+    </div>
+    </section>
+
+    <section class="resume-box">
+        <h2>&#128187; Skills</h2>
+        <ul>
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>Canva & Capcut</li>
+            <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+            <li>Teamwork & Communication</li>
+        </ul>
+    </section>
+
+    <section class="resume-box">
+        <h2>&#127941; Co-Curricular Activities</h2>
+        <ul>
+            <li><a href="#" onclick="showPopup('children')">Children’s Librarianship Event</a> : Certificate & Gift Bureau</li>
+            <li><a href="#" onclick="showPopup('pr')">Public Relation Event</a> : Certificate & Gift Bureau</li>
+        </ul>
+    </section>
+
+    <section class="resume-box">
+        <h2>&#127942; Achievements & Awards</h2>
+        <ul>
+            <li><a href="#" onclick="showPopup('dean')">Dean’s List : Semester 2 - 5</a></li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Hanim Syazwani. All Right Reserved. IMS456 Assignment Purpose.</p>
+</footer>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆️</button>
+
+<div id="uitm-popup" class="popup">
+    <div class="popup-content">
+        <h3>UiTM Rembau</h3>
+        <p>&#128205; : Universiti Teknologi Mara (UiTM), Cawangan Negeri Sembilan, Kampus Rembau, Jalan UiTM Rembau, 71300 Rembau, Negeri Sembilan</p>
+        <p>&#128222; : +606-698 2000</p>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<div id="ketari-popup" class="popup">
+    <div class="popup-content">
+        <h3>SMK Ketari</h3>
+        <p>&#128205; : Sekolah Menengah Kebangsaan Ketari, Jalan Kuala Lumpur, 28700 Bentong, Pahang</p>
+        <p>&#128222; : 092221278</p>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<div id="khai mun-popup" class="popup">
+    <div class="popup-content">
+        <h3>SMK Khai Mun</h3>
+        <p>&#128205; : Sekolah Menengah Kebangsaan Khai Mun, Peti Surat 18, Chamang Baru, 28700 Bentong, Pahang</p>
+        <p>&#128222; : 092221137</p>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<script>
+    function showPopup(id) {
+        document.getElementById(id + '-popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+        const popups = document.querySelectorAll('.popup');
+        popups.forEach(p => p.style.display = 'none');
+    }
+</script>
+
+<div id="children-popup" class="popup">
+    <div class="popup-content">
+        <img src="sijil chillib event.png" alt="Children Event Certificate" class="popup-img">
+        <h3>Children’s Librarianship Event</h3>
+        <p>Certificate & Gift Bureau</p>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<div id="pr-popup" class="popup">
+    <div class="popup-content">
+        <img src="sijil pr event.jpg" alt="Public Relation Event Certificate" class="popup-img">
+        <h3>Public Relation Event</h3>
+        <p>Certificate & Gift Bureau</p>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<div id="dean-popup" class="popup">
+    <div class="popup-content">
+        <h3>Dean’s List Certificates</h3>
+        <img src="dekan s4.jpg" alt="Dean's List Semester 4" class="popup-img">
+        <img src="dekan w them.jpg" alt="Dean's Certificates" class="popup-img">
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menuLinks").classList.toggle("active");
+  }
+</script>
+
+<script>
+    window.onscroll = function () {
+      const btn = document.getElementById("scrollTopBtn");
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+    ) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+</script>
+
+</body>
+</html>

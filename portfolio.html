@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>My Portfolio</h1>
+</header>
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <div class="menu-links" id="menuLinks">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="fade-in">
+  <section class="portfolio-wrapper">
+    <div class="project-box">
+      <h2>Children's Librarianship Event</h2>
+      <h3>"Kawan Buku Kita: Teman Bacaan Anak Kampung"</h3>
+
+      <div class="slideshow-container">
+        <div class="mySlides1 fade">
+          <img src="kawan buku kita.jpg" class="slide-img">
+        </div>
+        <div class="mySlides1 fade">
+          <img src="banner lukisan.jpg" class="slide-img">
+        </div>
+        <div class="mySlides1 fade">
+          <img src="depan sk bkt tampoi.jpg" class="slide-img">
+        </div>
+        <div class="mySlides1 fade">
+          <img src="sk bkt tampoi.jpg" class="slide-img">
+        </div>
+        <div class="mySlides1 fade">
+          <img src="sijil chillib event.png" class="slide-img">
+        </div>
+    </div>
+
+      <div class="thumbnail-gallery">
+        <img src="kawan buku kita.jpg" onclick="openModal();currentSlideModal(1)" class="gallery-img">
+        <img src="banner lukisan.jpg" onclick="openModal();currentSlideModal(2)" class="gallery-img">
+        <img src="depan sk bkt tampoi.jpg" onclick="openModal();currentSlideModal(3)" class="gallery-img">
+        <img src="sk bkt tampoi.jpg" onclick="openModal();currentSlideModal(4)" class="gallery-img">
+        <img src="sijil chillib event.png" onclick="openModal();currentSlideModal(5)" class="gallery-img">
+      </div>
+
+      <button class="read-more-btn" onclick="showPopup('children librarianship event')">Read More</button>
+    </div>
+  </section>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <div class="modalSlides">
+        <div class="numbertext">1 / 5</div>
+        <img src="kawan buku kita.jpg" class="modal-slide-img">
+      </div>
+      <div class="modalSlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="banner lukisan.jpg" class="modal-slide-img">
+      </div>
+      <div class="modalSlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="depan sk bkt tampoi.jpg" class="modal-slide-img">
+      </div>
+      <div class="modalSlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="sk bkt tampoi.jpg" class="modal-slide-img">
+      </div>
+      <div class="modalSlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="sijil chillib event.png" class="modal-slide-img">
+      </div>
+      <a class="prev" onclick="plusSlidesModal(-1)">❮</a>
+      <a class="next" onclick="plusSlidesModal(1)">❯</a>
+    </div>
+  </div>
+
+  <section class="portfolio-wrapper">
+    <div class="project-box">
+      <h2>Public Relations Event</h2>
+      <h3>"Community Library Outreach"</h3>
+
+      <div class="slideshow-container">
+        <div class="mySlides2 fade">
+          <img src="community library outreach.jpg" class="slide-img">
+        </div>
+        <div class="mySlides2 fade">
+          <img src="4A.jpg" class="slide-img">
+        </div>
+        <div class="mySlides2 fade">
+          <img src="button badge.jpg" class="slide-img">
+        </div>
+        <div class="mySlides2 fade">
+          <img src="sijil pr event.jpg" class="slide-img">
+        </div>
+    </div>
+
+      <div class="thumbnail-gallery">
+        <img src="community library outreach.jpg" onclick="openModal2();currentSlideModal2(1)" class="gallery-img">
+        <img src="4A.jpg" onclick="openModal2();currentSlideModal2(2)" class="gallery-img">
+        <img src="button badge.jpg" onclick="openModal2();currentSlideModal2(3)" class="gallery-img">
+        <img src="sijil pr event.jpg" onclick="openModal2();currentSlideModal2(4)" class="gallery-img">
+      </div>
+
+      <button class="read-more-btn" onclick="showPopup('public relations event')">Read More</button>
+    </div>
+  </section>
+
+  <div id="myModal2" class="modal">
+    <span class="close cursor" onclick="closeModal2()">&times;</span>
+    <div class="modal-content">
+      <div class="modalSlides2">
+        <div class="numbertext">1 / 4</div>
+        <img src="community library outreach.jpg" class="modal-slide-img">
+      </div>
+      <div class="modalSlides2">
+        <div class="numbertext">2 / 4</div>
+        <img src="4A.jpg" class="modal-slide-img">
+      </div>
+      <div class="modalSlides2">
+        <div class="numbertext">3 / 4</div>
+        <img src="button badge.jpg" class="modal-slide-img">
+      </div>
+      <div class="modalSlides2">
+        <div class="numbertext">4 / 4</div>
+        <img src="sijil pr event.jpg" class="modal-slide-img">
+      </div>
+      <a class="prev" onclick="plusSlidesModal2(-1)">❮</a>
+      <a class="next" onclick="plusSlidesModal2(1)">❯</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Hanim Syazwani. All Right Reserved. IMS456 Assignment Purpose.</p>
+</footer>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆️</button>
+
+<div id="children librarianship event-popup" class="popup">
+  <div class="popup-content">
+    <h3>"Kawan Buku Kita: Teman Bacaan Anak Kampung"</h3>
+    <p>The program involving students from Years 3 to 6 at SK Bkt Tampoi (A), Dengkil was conducted with the objective of inspiring Orang Asli students by fostering their academic interests and motivation for personal development. Through engaging and interactive learning activities, the program aimed to cultivate a passion for reading and support the holistic growth of the participants.</p>
+    <button class="close-btn" onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<div id="public relations event-popup" class="popup">
+  <div class="popup-content">
+    <h3>"Community Library Outreach"</h3>
+    <p>The program was held on June 22, 2024, at the Malaysian Prison Museum located on Jalan Parameswara, Kampung Bandar Hilir, Melaka. It involved 40 students from MRSM Alor Gajah, Melaka. The main goal was to share knowledge and give the students a chance to learn about and experience what it’s like inside a prison. It was a great way to expose them to a different environment and help them gain new insights.</p>
+    <button class="close-btn" onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<script>
+  window.onscroll = function () {
+    const btn = document.getElementById("scrollTopBtn");
+    btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function toggleMenu() {
+    document.getElementById("menuLinks").classList.toggle("active");
+  }
+
+  function showPopup(id) {
+    document.getElementById(id + "-popup").style.display = "flex";
+  }
+
+  function closePopup() {
+    document.querySelectorAll(".popup").forEach(p => p.style.display = "none");
+  }
+
+  let slideIndex = [1, 1];
+  let slideId = ["mySlides1", "mySlides2"];
+  let autoSlideTimer = [];
+
+  showSlides(1, 0);
+  showSlides(1, 1);
+  startAutoSlide(0);
+  startAutoSlide(1);
+
+  function plusSlides(n, no) {
+    showSlides(slideIndex[no] += n, no);
+  }
+
+  function showSlides(n, no) {
+    let i, x = document.getElementsByClassName(slideId[no]);
+    if (n > x.length) slideIndex[no] = 1;
+    if (n < 1) slideIndex[no] = x.length;
+    for (i = 0; i < x.length; i++) x[i].style.display = "none";
+    x[slideIndex[no] - 1].style.display = "block";
+  }
+
+  function startAutoSlide(no) {
+    autoSlideTimer[no] = setInterval(() => {
+      plusSlides(1, no);
+    }, 3000);
+  }
+
+  let slideIndexModal = 1;
+
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+    showSlidesModal(slideIndexModal);
+  }
+
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  function plusSlidesModal(n) {
+    showSlidesModal(slideIndexModal += n);
+  }
+
+  function currentSlideModal(n) {
+    showSlidesModal(slideIndexModal = n);
+  }
+
+  function showSlidesModal(n) {
+    let i;
+    let slides = document.getElementsByClassName("modalSlides");
+    if (n > slides.length) slideIndexModal = 1;
+    if (n < 1) slideIndexModal = slides.length;
+    for (i = 0; i < slides.length; i++) slides[i].style.display = "none";
+    slides[slideIndexModal - 1].style.display = "block";
+  }
+
+  let slideIndexModal2 = 1;
+
+  function openModal2() {
+    document.getElementById("myModal2").style.display = "block";
+    showSlidesModal2(slideIndexModal2);
+  }
+
+  function closeModal2() {
+    document.getElementById("myModal2").style.display = "none";
+  }
+
+  function plusSlidesModal2(n) {
+    showSlidesModal2(slideIndexModal2 += n);
+  }
+
+  function currentSlideModal2(n) {
+    showSlidesModal2(slideIndexModal2 = n);
+  }
+
+  function showSlidesModal2(n) {
+    let i;
+    let slides = document.getElementsByClassName("modalSlides2");
+    if (n > slides.length) slideIndexModal2 = 1;
+    if (n < 1) slideIndexModal2 = slides.length;
+    for (i = 0; i < slides.length; i++) slides[i].style.display = "none";
+    slides[slideIndexModal2 - 1].style.display = "block";
+  }
+</script>
+
+</body>
+</html>
